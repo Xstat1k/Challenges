@@ -118,3 +118,10 @@ some code that was used and a simple descripton for future reference
 | *Cin* | Character input |
 | *Emplace_back* | adds temporary new data to the list|
 
+
+
+
+references:
+
+[chatgpt](https://chatgpt.com/)
+[wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
