@@ -1,345 +1,159 @@
 #include <iostream> 
-
 #include <vector> 
-
 #include <string> 
-
 #include <limits> 
-
 #include <algorithm> // For std::swap 
 
- 
-
 class Item  
-
 { 
-
 public: 
-
     std::string Name; 
-
     int Value; 
-
     int Weight; 
-
- 
-
     // Item constructor 
-
     Item(std::string name, int value, int weight) : Name(name), Value(value), Weight(weight) {} 
-
- 
-
     friend std::ostream& operator<<(std::ostream& os, const Item& item) 
-
     { 
-
         return os << item.Name << " - " << item.Value << " - " << item.Weight; 
-
     } 
-
 }; 
 
- 
-
 // Bubble sorter template
-
 void BubbleSort(std::vector<Item>& items, bool (*compare)(const Item&, const Item&))  
-
 { 
-
     for (size_t i = 0; i < items.size() - 1; i++) 
-
     { 
-
         for (size_t j = 0; j < items.size() - 1 - i; j++) 
-
         { 
-
             if (compare(items[j], items[j + 1]))  
-
             { 
-
                 std::swap(items[j], items[j + 1]); 
-
             } 
-
         } 
-
     } 
-
 } 
-
- 
 
 // Add item, ask for input name and value 
-
 void AddItem(std::vector<Item>& items)  
-
 { 
-
     std::string name; 
-
     int value, weight; 
-
- 
-
     std::cout << "Enter the item name: "; 
-
     std::cin >> name; 
-
-    
-
     std::cout << "Enter the item value: "; 
-
     if (std::cin >> value)  
-
     { 
-
         std::cout << "Enter the item weight: "; 
-
         if (std::cin >> weight)  
-
         { 
-
             items.emplace_back(name, value, weight); 
-
             std::cout << "Item '" << name << "' with value " << value << " and weight " << weight << " added.\n"; 
-
         }  
-
         else  
-
         { 
-
             std::cout << "Invalid weight. Item not added.\n"; 
-
             std::cin.clear();  
-
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Get rid of nonsense long stuff 
-
         } 
-
     }  
-
-    else  
-
+   
+else  
     { 
-
         std::cout << "Invalid value. Item not added.\n"; 
-
         std::cin.clear();  
-
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Get rid of nonsense long stuff 
-
     } 
-
 } 
-
- 
-
 // template options for sorting inventory 
-
 bool CompareByNameAscending(const Item& a, const Item& b)  
-
- 
-
 { 
-
     return a.Name > b.Name; 
-
 } 
-
- 
-
 bool CompareByNameDescending(const Item& a, const Item& b) 
-
- 
-
-{ 
-
+ { 
     return a.Name < b.Name; 
-
 } 
 
- 
-
-bool CompareByValueAscending(const Item& a, const Item& b) 
-
- 
-
+ bool CompareByValueAscending(const Item& a, const Item& b) 
 { 
-
     return a.Value > b.Value; 
-
 } 
-
- 
-
 bool CompareByValueDescending(const Item& a, const Item& b) 
-
- 
-
 { 
-
     return a.Value < b.Value; 
-
 } 
-
- 
-
- 
-
 bool CompareByWeightAscending(const Item& a, const Item& b)  
-
 { 
-
     return a.Weight < b.Weight;  
-
 } 
-
- 
-
 bool CompareByWeightDescending(const Item& a, const Item& b)  
-
 { 
-
     return a.Weight > b.Weight;  
-
 } 
-
- 
 
 // UI for sorting items 
-
 void SortItems(std::vector<Item>& items)  
-
 { 
-
     std::cout << "\nHow would you like to sort the items?\n"; 
-
     std::cout << "1. By Name(A-Z)\n2. By Name(Z-A)\n3. By Value(↓)\n4. By Value(↑)\n5. By Weight(↑)\n6. By Weight(↓)\n"; 
-
-    std::cout << "Please enter choice(1-6): "; 
-
-     
-
+    std::cout << "Please enter choice(1-6): ";  
     int choice; 
-
     std::cin >> choice; 
 
- 
-
     // Bubble sorter for sorting options uses cases 
-
     switch (choice)  
-
     { 
-
         case 1: BubbleSort(items, CompareByNameAscending); break; 
-
         case 2: BubbleSort(items, CompareByNameDescending); break; 
-
         case 3: BubbleSort(items, CompareByValueAscending); break; 
-
         case 4: BubbleSort(items, CompareByValueDescending); break; 
-
         case 5: BubbleSort(items, CompareByWeightAscending); break;  
-
         case 6: BubbleSort(items, CompareByWeightDescending); break;  
-
         default:  
-
             std::cout << "Invalid choice.\n";  
-
             return; 
-
     } 
-
- 
-
     std::cout << "\nSorted items:\n"; 
-
     for (const auto& item : items)  
-
     { 
-
         std::cout << item << '\n'; 
-
     } 
-
 } 
 
- 
-
 int main()  
-
 { 
-
     // Base items 
-
     std::vector<Item> items =  
-
     { 
-
         {"Sword", 150, 2}, 
-
         {"Potion", 50, 1}, 
-
         {"Shield", 100, 7}, 
-
         {"Bow", 120, 4}, 
-
         {"Helmet", 80, 3} 
-
     }; 
 
  
-
     std::cout << "Inventory:\n"; 
-
     for (const auto& item : items) 
-
     { 
-
         std::cout << item << '\n'; 
-
     } 
 
  
-
     // UI for adding new items 
-
     while (true) 
-
     { 
-
         std::cout << "\nWould you like to add a new item? (yes/no): "; 
-
         std::string response; 
-
         std::cin >> response; 
-
         if (response == "yes") 
-
         { 
-
             // If yes, use the rest of the code 
-
             AddItem(items); 
-
         } 
-
        
-
         // Resorting items including any additional ones 
-
         SortItems(items); 
-
     } 
-
- 
-
-    return 0; 
-
+     return 0; 
 } 
