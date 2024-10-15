@@ -78,6 +78,12 @@ void displayPotionLog(const std::vector<Potion>& potions, const std::string& typ
 
 // Function to heal players using the available potions
 void healPlayers(std::vector<Player>& players, std::vector<Potion>& healthPotions, std::vector<Potion>& manaPotions) {
+    std::sort(healthPotions.begin(),healthPotions.end(),[](const Potion& leftPotion,const Potion& rightPotion){
+        return leftPotion.points > rightPotion.points;
+    });
+    std::sort(manaPotions.begin(),manaPotions.end(),[](const Potion& leftPotion,const Potion& rightPotion){
+        return leftPotion.points > rightPotion.points;
+    });
     displayPotionLog(healthPotions, "Health"); // Display health potions
     displayPotionLog(manaPotions, "Mana");     // Display mana potions
 
@@ -90,28 +96,37 @@ void healPlayers(std::vector<Player>& players, std::vector<Potion>& healthPotion
     // Loop through each player to heal and restore mana
     for (auto& player : players) {
         player.displayStatus(); // Display player's status before healing
-
-        // Heal with health potions
-        for (auto& potion : healthPotions) {
-            // While the player needs healing and there are potions available
-            while (player.needsHealing() && potion.quantity > 0) {
-                int healAmount = std::min(potion.points, player.getMaxHealth() - player.getCurrentHealth()); // Determine heal amount
-                player.heal(healAmount); // Heal player
-                potionLog.push_back(player.getName() + " used a health potion of " + std::to_string(potion.points) + " points."); // Log potion use
-                potion.quantity--; // Decrement potion quantity
+        int requiredHealAmount = player.getMaxHealth()-player.getCurrentHealth();
+       
+            for (int i= 0;i<healthPotions.size();++i){
+                auto potion=healthPotions[i];
+                if(potion.quantity<=0){
+                    continue;
+                } ///newstuff!!!!!!
+                if(requiredHealAmount >= potion.points){
+                    requiredHealAmount-=potion.points;
+                    player.heal(potion.points);  
+                    potionLog.push_back(player.getName() + " used a health potion of " + std::to_string(potion.points) + " points."); // Log potion use
+                    potion.quantity--;
+                    i=0;
+                }
             }
-        }
-
-        // Restore mana with mana potions
-        for (auto& potion : manaPotions) {
-            // While the player needs mana and there are potions available
-            while (player.needsMana() && potion.quantity > 0) {
-                int restoreAmount = std::min(potion.points, player.getMaxMana() - player.getCurrentMana()); // Determine restore amount
-                player.restoreMana(restoreAmount); // Restore mana
-                potionLog.push_back(player.getName() + " used a mana potion of " + std::to_string(potion.points) + " points."); // Log potion use
-                potion.quantity--; // Decrement potion quantity
+    
+      int requiredmanaAmount = player.getMaxMana()-player.getCurrentMana();
+       
+            for (int i= 0;i<manaPotions.size();++i){
+                auto potion=manaPotions[i];
+                if(potion.quantity<=0){
+                    continue;
+                }
+                if(requiredmanaAmount >= potion.points){
+                    requiredmanaAmount-=potion.points;
+                    player.restoreMana(potion.points);  
+                    potionLog.push_back(player.getName() + " used a health potion of " + std::to_string(potion.points) + " points."); // Log potion use
+                    potion.quantity--;
+                    i=0;
+                }
             }
-        }
 
         // Indicate healing occurred and display updated status
         std::cout << "healed too\n";  
@@ -133,17 +148,16 @@ void healPlayers(std::vector<Player>& players, std::vector<Potion>& healthPotion
 int main() {
     // Initialize players with their health and mana attributes
     std::vector<Player> players = { 
-        {"Mage", 50, 100, 30, 60}, // Player: Mage, current health: 50, max health: 100, current mana: 30, max mana: 60
+        {"Mage", 90, 100, 30, 60}, // Player: Mage, current health: 50, max health: 100, current mana: 30, max mana: 60
         {"Knight", 70, 100, 40, 80}, // Player: Knight, current health: 70, max health: 100, current mana: 40, max mana: 80
         {"Rogue", 65, 100, 20, 50}, // Player: Rogue, current health: 65, max health: 100, current mana: 20, max mana: 50
         {"Cleric", 85, 100, 50, 90}  // Player: Cleric, current health: 85, max health: 100, current mana: 50, max mana: 90
     };
     
     // Initialize potions available for healing and mana restoration
-    std::vector<Potion> healthPotions = { {50, 3}, {20, 5}, {10, 10} };  // Health potions: 3 potions of 50 points, 5 potions of 20 points, 10 potions of 10 points
-    std::vector<Potion> manaPotions = { {30, 2}, {15, 4}, {5, 8} };     // Mana potions: 2 potions of 30 points, 4 potions of 15 points, 8 potions of 5 points
+    std::vector<Potion> healthPotions = {  {50, 3}, {20, 5},{10, 4} };  // Health potions: 3 potions of 50 points, 5 potions of 20 points, 10 potions of 10 points
+    std::vector<Potion> manaPotions = { {30, 2}, {15, 4}, { 5 , 2} };     // Mana potions: 2 potions of 30 points, 4 potions of 15 points, 8 potions of 5 points
 
     healPlayers(players, healthPotions, manaPotions); // Call the function to heal players
     return 0; // End of the program
 }
-
