@@ -179,4 +179,35 @@ int main() {
 - It initializes a list of players with their respective health and mana attributes.
 - It also initializes available health and mana potions.
 - Finally, it calls the `healPlayers` function to apply the potions to the players.
+Got it! Here’s a cheat sheet formatted in a table with explanations for the Potion and Player Management System, structured like the previous one you provided.
+
+---
+
+## Cheat Sheet
+
+| **Code**                           | **Description**                                                      |
+|:-----------------------------------|:---------------------------------------------------------------------|
+| `class Potion`                     | Represents a potion with healing or mana points.                    |
+| `int points`                       | Healing or mana points provided by the potion.                      |
+| `int quantity`                     | Number of available potions.                                        |
+| `Potion(int p, int q)`             | Constructor to initialize potion points and quantity.               |
+| `class Player`                     | Represents a player with health and mana attributes.                |
+| `std::string name`                | Player's name.                                                      |
+| `int currentHealth`                | Current health of the player.                                       |
+| `int maxHealth`                    | Maximum health of the player.                                       |
+| `int currentMana`                  | Current mana of the player.                                         |
+| `int maxMana`                      | Maximum mana of the player.                                         |
+| `Player(std::string n, int ch, int mh, int cm, int mm)` | Constructor to initialize player attributes.               |
+| `void heal(int amount)`            | Increases the player's current health, capped at maximum health.    |
+| `void restoreMana(int amount)`     | Increases the player's current mana, capped at maximum mana.        |
+| `bool needsHealing() const`        | Returns true if the player needs healing (current health < max health). |
+| `bool needsMana() const`           | Returns true if the player needs mana (current mana < max mana).   |
+| `void displayStatus() const`       | Displays the player's current health and mana status.               |
+| `void displayPotionLog(...)`       | Displays the available potions with points and quantities.          |
+| `void healPlayers(...)`            | Heals players and restores mana using available potions.            |
+| `std::vector<Potion>`              | Stores multiple Potion objects.                                     |
+| `std::vector<Player>`              | Stores multiple Player objects.                                     |
+| `std::sort(...)`                   | Sorts the potions based on points in descending order.             |
+| `potion.quantity--`                | Decreases the quantity of the potion used by one.                   |
+--- 
 
