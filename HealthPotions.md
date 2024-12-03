@@ -212,4 +212,12 @@ this was a fun and engaging task, while the dual coding was difficult i apreciat
 | `std::sort(...)`                   | Sorts the potions based on points in descending order.             |
 | `potion.quantity--`                | Decreases the quantity of the potion used by one.                   |
 --- 
+bibliography:
 
+[chatgpt](https://chatgpt.com/)
+
+[geeksforgeeks]()
+
+Declared Asssets:
+
+[chatgpt4.0](https://chatgpt.com/) (InventoryMarkdown.md)
