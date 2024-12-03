@@ -1,8 +1,8 @@
 # Charactor Creator Challenge
 
 This part of the project focuses on creating characters with predefined stats based on their chosen class. The system uses a `Character` class to hold the basic attributes and a `CharacterFactory` to generate characters with appropriate stats.
+A C++ factory is a design pattern that creates objects without specifying their exact class. It uses a factory method to return different objects based on input or conditions. This keeps code flexible and easier to manage by centralizing object creation.
 
----
 
 ## **1. Character Base Class**
 
@@ -116,6 +116,32 @@ This was another dual coding project and was very engaging and fun. It was chall
 ## improvements 
 in future i would of liked to add more ustomisation on the charactor creator such as more/ multipke items that can be quipped or allow the user to add custom ones.
 
+## Cheat sheet
+Here’s a **Cheat Sheet** for the Factory and Decorator pattern code:
+
+| **Code**                                         | **Description**                                                 |
+|:-------------------------------------------------|:---------------------------------------------------------------|
+| `enum class CharacterClass`                      | Enum to define different character classes (e.g., Warrior, Mage). |
+| `CharacterClass::Warrior`                        | Represents the Warrior class in the character selection.      |
+| `class Character`                                | Base class representing a character with stats (strength, agility, etc.). |
+| `Character(std::string n, CharacterClass c)`     | Constructor to initialize a character with a name and class.   |
+| `virtual void PrintCharacterInfo()`              | Method to display character stats and class information.       |
+| `class CharacterFactory`                         | Factory class responsible for creating characters.            |
+| `Character* CreateCharacter(const std::string& name, CharacterClass charClass)` | Creates a new character based on class and sets stats accordingly. |
+| `static const std::map<CharacterClass, std::vector<int>> classStats` | Static map storing the stats for each character class.        |
+| `class CharacterDecorator`                       | Decorator class that extends the functionality of a character without changing its core structure. |
+| `CharacterDecorator(Character* c)`               | Constructor that accepts a character to decorate.              |
+| `void PrintCharacterInfo()`                      | Method to print decorated character info.                      |
+| `class EnchantedArmorDecorator`                  | Concrete decorator that adds armor with strength and endurance bonuses. |
+| `EnchantedArmorDecorator(Character* c)`         | Constructor that adds enchanted armor to a character.         |
+| `void PrintCharacterInfo()`                      | Prints the character info, then adds the armor's bonuses.     |
+| `class SpecialWeaponDecorator`                   | Concrete decorator that adds special weapon with agility and luck bonuses. |
+| `SpecialWeaponDecorator(Character* c)`          | Constructor that adds a special weapon to a character.         |
+| `void PrintCharacterInfo()`                      | Prints character info and adds weapon's bonuses.              |
+| `Character* character = CharacterFactory::CreateCharacter(name, selectedClass);` | Creates a character based on user input.                      |
+| `delete character;`                              | Cleans up dynamically allocated memory for the character.      |
+
+biblography:
 
 [chatgpt](https://chatgpt.com/)
 
