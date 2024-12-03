@@ -1,7 +1,7 @@
 
-## Potion and Player Management System
+# Potion and Player Management System
 
-
+## Object Oriented Design
 In this project, Object-Oriented Design (OOD) is used to structure the game logic into separate classes such as Potion and Player, each containing relevant attributes and methods. This approach promotes modularity, reusability, and easier maintenance by focusing on how objects interact with each other to manage healing and mana restoration within the game.
 
 ### 1. **Potion Class Definition**
