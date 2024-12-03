@@ -3,7 +3,7 @@
 
 ## Spell Inventory Overview
 
-This program creates an inventory of spells, each with specific attributes such as mana cost, target type, and spell effect. Users can search for spells by keywords to filter results based on spell type or target.
+In this project, I used a hashmap to store spells and make searching more efficient. A hashmap maps each spell's name (the key) to its data (the value), allowing for quick lookups. This makes it faster to find a spell compared to searching through a list, as the hashmap provides near-instant access to any spell by its name.
 
 ### *Spell System Code (C++)*
 
@@ -44,7 +44,8 @@ public:
     Spell(std::string n, int mCost, int p, TargetType t, SpellType st)
         : name(n), manaCost(mCost), power(p), target(t), type(st) {}
 ```
-this code defines the spells catagories so that the user can pick from the options
+
+This code categorizes spells, allowing users to pick spells based on their effect, mana cost, and target type. The TargetType enum defines if a spell targets a single entity, an area, or the caster, while the SpellType enum classifies spells as damage, healing, buffs, or debuffs. The Spell class stores each spell's attributes, helping manage them in the inventory.
    
 ```c++
 // Function to create a list of spells
@@ -110,7 +111,7 @@ int main()
 }
 ```
 
-This code allows users to search for spells by keywords and displays matching spells based on their attributes, utilizing functions to create a list of spells, create a hash map for efficient searching, and search through the spells based on user input, running continuously until the user types "exit."
+This section includes functions for creating a list of spells, mapping them into a hash map for faster search, and enabling the search functionality. The CreateSpells function generates a list of predefined spells, while CreateSpellMap maps each spell's name to its corresponding object. The SearchSpells function allows users to search for spells using keywords, showing details of any matches found, and keeps prompting for new keywords until the user types "exit."
 
 ---
 
