@@ -149,6 +149,7 @@ void healPlayers(std::vector<Player>& players, std::vector<Potion>& healthPotion
 **Explanation:**
 - The `healPlayers` function manages the healing and mana restoration process for each player.
 - It sorts health and mana potions by their effectiveness (points) in descending order.
+- after user testing and editing the code based on input i found that reorganising the array for the potions broke the code and had to fix that
 - It iterates through each player, checking their health and mana requirements, and applies potions as necessary, updating the quantities accordingly.
 
 ---
@@ -182,7 +183,8 @@ int main() {
 Got it! Here’s a cheat sheet formatted in a table with explanations for the Potion and Player Management System, structured like the previous one you provided.
 
 ---
-
+**learning**
+this was a fun and engaging task, while the dual coding was difficult i apreciated the learning experience after. DUal coding also made it easier to test for wrong things as there was two of us. for a better user experience and challenge i included a log system too.
 ## Cheat Sheet
 
 | **Code**                           | **Description**                                                      |
