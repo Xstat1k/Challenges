@@ -149,6 +149,8 @@ bibliography:
 
 [geeksforgeeks](https://www.geeksforgeeks.org/how-to-use-hashmap-in-cpp/)
 
+[educative](https://www.educative.io/answers/what-is-a-hash-map-in-cpp)
+
 Declared Asssets:
 
 [chatgpt4.0](https://chatgpt.com/) (SpellBook.md)
