@@ -224,6 +224,8 @@ bibliography:
 
 [geeksforgeeks](https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/)
 
+[nexwebsities](https://nexwebsites.com/blog/object-oriented-design-with-cpp/)
+
 Declared Asssets:
 
 [chatgpt4.0](https://chatgpt.com/) (HealthPotions.md)
