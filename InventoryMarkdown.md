@@ -129,4 +129,4 @@ bibliography:
 
 Declared Asssets:
 
-[chatgpt4.0](https://chatgpt.com/)
+[chatgpt4.0](https://chatgpt.com/) (InventoryMarkdown.md)
