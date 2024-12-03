@@ -117,3 +117,12 @@ This was another dual coding project and was very engaging and fun. It was chall
 in future i would of liked to add more ustomisation on the charactor creator such as more/ multipke items that can be quipped or allow the user to add custom ones.
 
 
+[chatgpt](https://chatgpt.com/)
+
+[geeksforgeeks](https://www.geeksforgeeks.org/factory-method-pattern-c-design-patterns/)
+
+[refactoring](https://refactoring.guru/design-patterns/factory-method/cpp/example)
+
+Declared Asssets:
+
+[chatgpt4.0](https://chatgpt.com/) (DialougeTree.md)
