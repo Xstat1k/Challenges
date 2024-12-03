@@ -1,6 +1,9 @@
 
 ## Potion and Player Management System
 
+
+In this project, Object-Oriented Design (OOD) is used to structure the game logic into separate classes such as Potion and Player, each containing relevant attributes and methods. This approach promotes modularity, reusability, and easier maintenance by focusing on how objects interact with each other to manage healing and mana restoration within the game.
+
 ### 1. **Potion Class Definition**
 
 ```c++
@@ -184,7 +187,7 @@ Got it! Here’s a cheat sheet formatted in a table with explanations for the Po
 
 ---
 **learning**
-this was a fun and engaging task, while the dual coding was difficult i apreciated the learning experience after. DUal coding also made it easier to test for wrong things as there was two of us. for a better user experience and challenge i included a log system too.
+This task was enjoyable and engaging. While dual coding was challenging at times, it provided a valuable learning experience. Having two people working together made it easier to catch mistakes and test thoroughly. To improve the user experience and add more complexity, I also included a log system.
 ## Cheat Sheet
 
 | **Code**                           | **Description**                                                      |
@@ -216,8 +219,8 @@ bibliography:
 
 [chatgpt](https://chatgpt.com/)
 
-[geeksforgeeks]()
+[geeksforgeeks](https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/)
 
 Declared Asssets:
 
-[chatgpt4.0](https://chatgpt.com/) (InventoryMarkdown.md)
+[chatgpt4.0](https://chatgpt.com/) (HealthPotions.md)
