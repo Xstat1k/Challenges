@@ -114,6 +114,9 @@ int main()
 This section includes functions for creating a list of spells, mapping them into a hash map for faster search, and enabling the search functionality. The CreateSpells function generates a list of predefined spells, while CreateSpellMap maps each spell's name to its corresponding object. The SearchSpells function allows users to search for spells using keywords, showing details of any matches found, and keeps prompting for new keywords until the user types "exit."
 
 ---
+# Learning
+
+This project gave me a hands-on understanding of how hashmaps work by mapping each spell's name to its data, making it easier and faster to search for spells. It was a great way to learn how hashmaps optimize data retrieval, and I look forward to using them again in future projects for efficient data management.
 
 ## Cheat Sheet
 
