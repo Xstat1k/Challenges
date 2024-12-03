@@ -118,6 +118,9 @@ This section includes functions for creating a list of spells, mapping them into
 
 This project gave me a hands-on understanding of how hashmaps work by mapping each spell's name to its data, making it easier and faster to search for spells. It was a great way to learn how hashmaps optimize data retrieval, and I look forward to using them again in future projects for efficient data management.
 
+# Improvment
+I could make to the spell inventory system is adding a cooldown feature to each spell. This would track the time before a spell can be used again, adding more depth to spell management and strategy. Another enhancement could be implementing sorting functionality, allowing the user to quickly organize spells by type, mana cost, or power
+
 ## Cheat Sheet
 
 | **Code**                  | **Description**                                                   |
