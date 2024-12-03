@@ -136,3 +136,13 @@ This section includes functions for creating a list of spells, mapping them into
 | *std::cout*               | Outputs text to the console.                                      |
 | *std::cin*                | Reads input from the user.                                        |
 | *keyword == "exit"*       | Checks if user typed "exit" to quit the program.
+
+bibliography:
+
+[chatgpt](https://chatgpt.com/)
+
+[geeksforgeeks](https://www.geeksforgeeks.org/how-to-use-hashmap-in-cpp/)
+
+Declared Asssets:
+
+[chatgpt4.0](https://chatgpt.com/) (SpellBook.md)
