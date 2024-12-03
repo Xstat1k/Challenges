@@ -1,11 +1,5 @@
 # Charactor Creator Challenge
 
-
-Sure! Below is the updated developer journal, explaining the code provided in the format you requested.
-
----
-
-### Purpose
 This part of the project focuses on creating characters with predefined stats based on their chosen class. The system uses a `Character` class to hold the basic attributes and a `CharacterFactory` to generate characters with appropriate stats.
 
 ---
@@ -104,5 +98,22 @@ int main()
 - Example: If the user enters `1`, it selects the `Warrior` class for the new character, which then gets created with the appropriate stats.
 
 ---
+
+## Item Equipment
+```cpp
+    // Decorate character with chosen equipment
+    if (equipChoice == 1) {
+        character = new EnchantedArmorDecorator(character);
+    } else if (equipChoice == 2) {
+        character = new SpecialWeaponDecorator(character);
+    }
+```
+- here there are preset items for the player to chose from
+
+  ## Learning
+This was another dual coding project and was very engaging and fun. It was challenging understanding the process of factories and decorators, especially figuring out how to create objects dynamically with the Factory pattern and how to add new features to them without modifying their original code using the Decorator pattern. Despite the challenges, it was rewarding to see how these patterns made the code more flexible and easier to maintain.
+
+## improvements 
+in future i would of liked to add more ustomisation on the charactor creator such as more/ multipke items that can be quipped or allow the user to add custom ones.
 
 
