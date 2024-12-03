@@ -94,7 +94,7 @@ std::string name;
 Here it asks the user to include the Name, Value and Weight of their own objects. By using the `emplace_back` function to temporarily add it into the Data list, i could have used the `push_back` function but i would also have to create a temporary object myself and add it to the vector. `Cout` handles displaying text and `Cin` handles user input. if the user tries to include something that cannot be handled it is rejected.
 
 
-##Learning
+## Learning
 
 This was my first experience with a sorting algorithm, and I found it very interesting to learn about the different types and their uses. For the purpose of this task, bubble sort was the most suitable choice and served as a great starting point for learning. After getting user input, refining the code, and testing it by trying to break it myself, I was able to identify flaws that I might have missed otherwise.
 
