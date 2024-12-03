@@ -160,7 +160,7 @@ public class Program
 ## Learning
 This was another dual coding project in C#, and while I had some experience, my classmate had more. It was great working together, as I was able to learn a lot and get a better understanding of the code systems we used. learning about Trees and nodes seems like it will be incrediby useful in the future.
 
-## improvements
+## Improvements
 For future improvements, I could add more branching options to the dialogue, making conversations feel more dynamic. Another idea is to implement a save/load feature so players can return to their conversations later. potentally also conditions to the dialogue choices, where certain options only appear based on previous choices or player stats.
 
 
