@@ -99,7 +99,8 @@ Here it asks the user to include the Name, Value and Weight of their own objects
 This was my first experience with a sorting algorithm, and I found it very interesting to learn about the different types and their uses. For the purpose of this task, bubble sort was the most suitable choice and served as a great starting point for learning. After getting user input, refining the code, and testing it by trying to break it myself, I was able to identify flaws that I might have missed otherwise.
 
 
-
+## Improvements
+To improve the code, I could switch to a more efficient sorting algorithm like quicksort for larger datasets. Adding features to allow users to delete or update items in the inventory would also enhance its functionality and make the system more flexible.
 
 
 
