@@ -96,3 +96,9 @@ Through implementing Data-Oriented Design for the movement system, I learned how
 
 If I worked on this project more, I could improve the movement system by adding more detailed behaviors, like rotating entities or changing their velocity over time. I could also make the code more flexible by allowing different movement patterns, like diagonal movement or gravity. Another improvement could be to better handle edge cases, such as entities moving off-screen or ensuring the system can scale for more entities.
 
+| **Function**               | **Description**                                                                                                                                     |
+|----------------------------|----------------------------------------------|
+| `EntityData(float, float, float, float, float, float)` | Constructor to initialize an entity's position and velocity with the provided values.|
+| `void UpdatePositions(float deltaTime)` | Updates the positions of all entities based on their velocity and the given `deltaTime`.                                                 |
+| `void PrintPositions()`      | Prints the current positions (X, Y, Z) of all entities stored in the `entities` vector.                                                          |
+| `main()`                    | Initializes the `MovementSystem`, adds entities to it, and simulates multiple frames while updating and printing entity positions.                  |
