@@ -1,6 +1,6 @@
 # Dialogue System Overview
 
-This C# program implements a simple dialogue system using a tree structure where each node represents a dialogue option. Users can navigate through the dialogue based on their choices, leading to different branches of conversation.
+This C# program implements a simple tree data structure to represent a dialogue system. A tree consists of nodes, each holding a value, with parent nodes leading to child nodes, forming a hierarchy. This structure allowed for organized management of conversation paths, where each decision or response branched to the next part of the dialogue.
 
 ## *Dialogue System Code (C#)*
 
@@ -157,6 +157,9 @@ public class Program
 | `int.TryParse()`                                 | Tries to convert input to an integer and checks validity.    |
 
 ---
+## Learning
+This was another dual coding project in C#, and while I had some experience, my classmate had more. It was great working together, as I was able to learn a lot and get a better understanding of the code systems we used. learning about Trees and nodes seems like it will be incrediby useful in the future.
+
 
 bibliography:
 
