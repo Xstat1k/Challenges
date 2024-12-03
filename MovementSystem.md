@@ -102,3 +102,16 @@ If I worked on this project more, I could improve the movement system by adding 
 | `void UpdatePositions(float deltaTime)` | Updates the positions of all entities based on their velocity and the given `deltaTime`.                                                 |
 | `void PrintPositions()`      | Prints the current positions (X, Y, Z) of all entities stored in the `entities` vector.                                                          |
 | `main()`                    | Initializes the `MovementSystem`, adds entities to it, and simulates multiple frames while updating and printing entity positions.                  |
+
+
+bibliography:
+
+[chatgpt](https://chatgpt.com/)
+
+[geeksforgeeks]((https://www.geeksforgeeks.org/vector-operations/))
+
+[indiegamedev](https://indiegamedev.net/2020/05/19/an-entity-component-system-with-data-locality-in-cpp/)
+
+Declared Asssets:
+
+[chatgpt4.0](https://chatgpt.com/) (MovementSystem.md)
