@@ -158,3 +158,12 @@ public class Program
 
 ---
 
+bibliography:
+
+[chatgpt](https://chatgpt.com/)
+
+[geeksforgeeks](https://www.geeksforgeeks.org/tree-data-structure/)
+
+Declared Asssets:
+
+[chatgpt4.0](https://chatgpt.com/) (DialougeTree.md)
