@@ -125,7 +125,7 @@ bibliography:
 
 [chatgpt](https://chatgpt.com/)
 
-[wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
+[geeksforgeeks](https://www.geeksforgeeks.org/bubble-sort-algorithm/)
 
 Declared Asssets:
 
