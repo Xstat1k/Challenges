@@ -121,7 +121,12 @@ some code that was used and a simple descripton for future reference
 
 
 
-references:
+bibliography:
 
 [chatgpt](https://chatgpt.com/)
+
 [wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
+
+Declared Asssets:
+
+[chatgpt4.0](https://chatgpt.com/)
