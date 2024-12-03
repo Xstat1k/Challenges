@@ -108,7 +108,7 @@ bibliography:
 
 [chatgpt](https://chatgpt.com/)
 
-[geeksforgeeks]((https://www.geeksforgeeks.org/vector-operations/))
+[geeksforgeeks](https://www.geeksforgeeks.org/vector-operations/)
 
 [indiegamedev](https://indiegamedev.net/2020/05/19/an-entity-component-system-with-data-locality-in-cpp/)
 
