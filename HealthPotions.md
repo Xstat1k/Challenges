@@ -178,7 +178,7 @@ int main() {
 }
 ```
 
-**Explanation:**
+## Explanation
 - The `main` function serves as the entry point of the program.
 - It initializes a list of players with their respective health and mana attributes.
 - It also initializes available health and mana potions.
@@ -186,8 +186,11 @@ int main() {
 Got it! Here’s a cheat sheet formatted in a table with explanations for the Potion and Player Management System, structured like the previous one you provided.
 
 ---
-**learning**
-This task was enjoyable and engaging. While dual coding was challenging at times, it provided a valuable learning experience. Having two people working together made it easier to catch mistakes and test thoroughly. To improve the user experience and add more complexity, I also included a log system.
+## learning
+This task was enjoyable and engaging. While dual coding was challenging at times, it provided a valuable learning experience. Having two people working together made it easier to catch mistakes and test thoroughly. To improve the user experience and add more complexity, I also included a log system. i also added a mana system to try and complicate the system and test if it would break with multiple things to track.
+
+## Improvement
+An improvement could be to add a cooldown system for potions, so they can’t be used repeatedly in quick succession. Another idea would be to implement potion crafting, where players can combine ingredients to create custom potions. i could implement this along with an inventory system to make a more fleshed out gameplay interaction like a DND textgame.
 ## Cheat Sheet
 
 | **Code**                           | **Description**                                                      |
